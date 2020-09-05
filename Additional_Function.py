@@ -3,8 +3,8 @@ import tensorflow as tf
 import numpy as np
 from tqdm.notebook import tqdm
 
-def ApplyAUG(df, PATH, n_AUG = 1, up_sample_class = None, up_sample_ratio = 0.2,
-            load_and_preprocess_image = load_and_preprocess_image, data_augmentation = data_augmentation):
+def ApplyAUG(df, PATH, load_and_preprocess_image, data_augmentation,
+            n_AUG = 1, up_sample_class = None, up_sample_ratio = 0.2):
     """
     Fungsi untuk mengaplikasikan Preprocess dan Augmentation ke dalam data gambar untuk disimpan
     kedalam direktori/file yang baru.

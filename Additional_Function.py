@@ -58,8 +58,8 @@ def ApplyAUG(df, PATH, LP, data_aug, up_sample_ratio = 0.2,
             X.append(IMAGE_DIR); Y.append(i)
             for j in range(n_AUG[k]):
                 AUG_DIR = os.path.join(CHILD_DIR, f'AUG {j + 1}_{file[:-4]}.png')
-                aug = data_aug(np.expand_dims(img, 0))
-                tf.keras.preprocessing.image.save_img(AUG_DIR, aug[0])
+                aug = data_aug(img)
+                tf.keras.preprocessing.image.save_img(AUG_DIR, aug)
                 X.append(AUG_DIR); Y.append(i)
         print(f'[INFO] Selesai Memproses Kelas {i}')
         print('[INFO] ' + f'Banyak Data Kelas {i} setelah proses sebanyak {len(os.listdir(CHILD_DIR))} gambar\n'.title())

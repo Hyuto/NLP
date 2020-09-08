@@ -16,7 +16,6 @@ random.seed(SEED)
 np.random.seed(SEED)
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
-tf.logging.set_verbosity(tf.logging.ERROR)
 
 def load_and_preprocess_image(path: str, size = [256, 256]) -> np.ndarray:
     """

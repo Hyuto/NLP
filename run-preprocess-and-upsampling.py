@@ -95,9 +95,9 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH, LP, data_aug, up_sample_ratio = 0.2,
 
 if __name__ == "__main__":
     args = sys.argv
-    TRAIN_PATH = args[0]
-    TEST_SIZE = float(args[1])
-    UP_SAMPLES = [float(x) for x in args[2].split('-')]
+    TRAIN_PATH = args[1]
+    TEST_SIZE = float(args[2])
+    UP_SAMPLES = [float(x) for x in args[3].split('-')]
 
     data = pd.read_csv('https://raw.githubusercontent.com/Hyuto/NLP/master/TRAIN.CSV')
     TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = TEST_SIZE, 

@@ -15,8 +15,8 @@ os.environ['PYTHONHASHSEED'] = str(SEED)
 random.seed(SEED)
 np.random.seed(SEED)
 
-# Set TF Verbose to 0
-tf.autograph.set_verbosity(0)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 def load_and_preprocess_image(path: str, size = [256, 256]) -> np.ndarray:
     """
@@ -130,7 +130,7 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
                 tf.keras.preprocessing.image.save_img(AUG_DIR, aug) # TF save augmented image
                 X.append(AUG_DIR); Y.append(i) # Record path and label to X and Y
         print(f'[INFO] Selesai Memproses Kelas {i}')
-        print('[INFO] ' + f'Banyak Data Kelas {i} setelah proses sebanyak {len(os.listdir(CHILD_DIR))} gambar\n'.title())
+        print('[INFO] ' + f'Banyak Data Kelas {i} setelah proses sebanyak {len(os.listdir(CHILD_DIR))} gambar'.title())
     print(f'[INFO] Saved to {DIR}')
     return X, Y
 

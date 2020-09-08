@@ -17,7 +17,16 @@ np.random.seed(SEED)
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
-def load_and_preprocess_image(path: str, size = [256, 256]) -> np.ndarray:
+class Config(object):
+    def __init__(self):
+        self.size = 256
+        self.test_size = 0.15
+        self.upsamples = [0.5, 1, 2]
+        self.UP_SAMPLE_CLASS = None
+
+config = Config()
+
+def load_and_preprocess_image(path: str, size = [config.size, config.size]) -> np.ndarray:
     """
     Load & Preprocess Text
 
@@ -137,20 +146,38 @@ if __name__ == "__main__":
     # System ARGS
     args = sys.argv
     TRAIN_PATH = args[1]
-    TEST_SIZE = float(args[2])
-    UP_SAMPLES = [float(x) for x in args[3].split('-')]
+    if len(args) == 2:
+        if args[2] != '-':
+            config.size = int(args[2])
+    elif len(args) == 3:
+        if args[3] != '-':
+            TEST_SIZE = float(args[3])
+        else:
+            TEST_SIZE = config.test_size
+    elif len(args) == 4:
+        if args[4] != '-':
+            UP_SAMPLES = [float(x) for x in args[4].split('-')]
+        else:
+            UP_SAMPLES = config.upsamples
+    elif len(args) == 5:
+        if args[5] != '-':
+            CLASS = args[5]
+        else:
+            CLASS = config.UP_SAMPLE_CLASS
 
     print('[INFO] Starting Program to Preprocess & Upsampling Data Gambar..')
     print('[INFO] Config :')
-    print(f'      Image Path       : {TRAIN_PATH}')
-    print(f'      Split Valid Size : {TEST_SIZE * 100}%')
-    print(f"      Rasio Upsample   : {' , '.join([str(x) for x in UP_SAMPLES])}")
+    print(f'      Image Path        : {TRAIN_PATH}')
+    print(f'      Image Resize Plan : {config.size}')
+    print(f'      Split Valid Size  : {TEST_SIZE * 100}%')
+    print(f"      Rasio Upsample    : {' , '.join([str(x) for x in UP_SAMPLES])}")
+    print(f"      Upsample Class    : {CLASS if CLASS != None else 'ALL'}")
     print()
 
     # X and Y
     data = pd.read_csv('https://raw.githubusercontent.com/Hyuto/NLP/master/TRAIN.CSV')
     TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = TEST_SIZE, 
-                                                    random_state = SEED, stratify = data.y.values)
+                                                       random_state = SEED, stratify = data.y.values)
 
     # Up Sample Train Data
     print('[INFO] Memulai Preprocess dan Augmentasi Pada Data Latih')
@@ -158,7 +185,7 @@ if __name__ == "__main__":
         print(f'[INFO] Tahap {i + 1}')
         DIREC = f'Up-Sample-0-by-{int(up_sample * 100)}%'
         TEMP_X, TEMP_Y = ApplyAUG(TRAIN_X, TRAIN_y, TRAIN_PATH, up_sample_ratio = up_sample, 
-                                  DIR = DIREC, up_sample_class = '0', data_aug = data_augmentation,
+                                  DIR = DIREC, up_sample_class = CLASS, data_aug = data_augmentation,
                                   LP = load_and_preprocess_image)
         df = pd.DataFrame({'DIR' : TEMP_X, 'label' : TEMP_Y})
         df.to_csv(DIREC + '/Keterangan.csv', index = False)

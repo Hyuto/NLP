@@ -163,11 +163,11 @@ if __name__ == "__main__":
 
     print('[INFO] Starting Program to Preprocess & Upsampling Data Gambar..')
     print('[INFO] Config :')
-    print(f'      Image Path        : {TRAIN_PATH}')
-    print(f'      Image Resize Plan : {config.size}')
-    print(f'      Split Valid Size  : {TEST_SIZE * 100}%')
-    print(f"      Rasio Upsample    : {' , '.join([str(x) for x in UP_SAMPLES])}")
-    print(f"      Upsample Class    : {CLASS if CLASS != None else 'ALL'}")
+    print(f'       Image Path        : {TRAIN_PATH}')
+    print(f'       Image Resize Plan : {config.size}')
+    print(f'       Split Valid Size  : {TEST_SIZE * 100}%')
+    print(f"       Rasio Upsample    : {' , '.join([str(x) for x in UP_SAMPLES])}")
+    print(f"       Upsample Class    : {CLASS if CLASS != None else 'ALL'}")
     print()
 
     # X and Y

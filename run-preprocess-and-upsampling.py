@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
     data = pd.read_csv('https://raw.githubusercontent.com/Hyuto/NLP/master/TRAIN.CSV')
     TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = TEST_SIZE, 
-                                                    random_state = SEED, stratify = TRAIN_y)
+                                                    random_state = SEED, stratify = data.y.values)
 
     for up_sample in UP_SAMPLES:
         DIREC = f'Up-Sample-0-by-{int(up_sample * 100)}%'

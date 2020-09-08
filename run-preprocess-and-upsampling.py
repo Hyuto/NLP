@@ -146,20 +146,20 @@ if __name__ == "__main__":
     # System ARGS
     args = sys.argv
     TRAIN_PATH = args[1]
-    if len(args) == 2:
+    if len(args) == 3:
         if args[2] != '-':
             config.size = int(args[2])
-    elif len(args) == 3:
+    elif len(args) == 4:
         if args[3] != '-':
             TEST_SIZE = float(args[3])
         else:
             TEST_SIZE = config.test_size
-    elif len(args) == 4:
+    elif len(args) == 5:
         if args[4] != '-':
             UP_SAMPLES = [float(x) for x in args[4].split('-')]
         else:
             UP_SAMPLES = config.upsamples
-    elif len(args) == 5:
+    elif len(args) == 6:
         if args[5] != '-':
             CLASS = args[5]
         else:

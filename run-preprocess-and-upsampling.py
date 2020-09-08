@@ -145,7 +145,7 @@ if __name__ == "__main__":
     print('[INFO] Config :')
     print(f'      Image Path       : {TRAIN_PATH}')
     print(f'      Split Valid Size : {TEST_SIZE * 100}%')
-    print(f'      Rasio Upsample   : {' , '.join([str(x) for x in UP_SAMPLES])}')
+    print(f"      Rasio Upsample   : {' , '.join([str(x) for x in UP_SAMPLES])}")
     print()
 
     # X and Y

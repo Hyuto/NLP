@@ -146,10 +146,20 @@ if __name__ == "__main__":
     # System ARGS
     args = sys.argv
     TRAIN_PATH = args[1]
-    config.size = int(args[2])
-    TEST_SIZE = float(args[3])
-    UP_SAMPLES = [float(x) for x in args[4].split('-')]
-    CLASS = args[5]
+    if args[2] != '-':
+        config.size = int(args[2])
+    if args[3] != '-':
+        TEST_SIZE = float(args[3])
+    else:
+        TEST_SIZE = config.test_size
+    if args[4] != '-':
+        UP_SAMPLES = [float(x) for x in args[4].split('-')]
+    else:
+        UP_SAMPLES = config.upsamples
+    if args[5] != '-':
+        CLASS = args[5]
+    else:
+        CLASS = config.UP_SAMPLE_CLASS
 
     print('[INFO] Starting Program to Preprocess & Upsampling Data Gambar..')
     print('[INFO] Config :')

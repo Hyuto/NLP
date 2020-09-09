@@ -75,7 +75,7 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
 
     Params
     TRAIN_X         : List atau Array direktori dari gambar
-    TRAIN_y         : List atau Array kelas(label) dari TRAIN_X
+    TRAIN_y         : List atau Array kelas(label) dari TRAIN_X [One Hot Encoding]
     PATH            : Direktori data gambar
     LP              : Load & Preprocess image function
     data_aug        : Augmentation function
@@ -119,7 +119,7 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
         data = TRAIN_X[TRAIN_y == i]                # Selecting Data based on Class
 
         if up_sample_class != None:                 # Up Sampling Plan
-            if str(i) == up_sample_class:
+            if i == up_sample_class:
                 n_AUG = __up_sampling(up_sample_ratio, len(data))
             else:
                 n_AUG = [0] * len(data)

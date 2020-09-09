@@ -155,20 +155,20 @@ def name_based_config(config, arg):
 def get_config(config, args):
     try: config.size = int(args[2])
     except: 
-        try:
-            name_based_config(config, args[2])
+        try: name_based_config(config, args[2])
+        except: pass
     try: config.test_size = float(args[3])
     except: 
-        try:
-            name_based_config(config, args[3])
+        try: name_based_config(config, args[3])
+        except: pass
     try: config.upsamples = [float(x) for x in args[4].split('-')]
     except: 
-        try:
-            name_based_config(config, args[4])
+        try: name_based_config(config, args[4])
+        except: pass
     try: config.UP_SAMPLE_CLASS = args[5]
     except: 
-        try:
-            name_based_config(config, args[5])
+        try: name_based_config(config, args[5])
+        except: pass 
 
 if __name__ == "__main__":
     # System ARGS

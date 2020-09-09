@@ -19,14 +19,14 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 class Config(object):
     def __init__(self):
-        self.size = 256
-        self.test_size = 0.15
-        self.upsamples = [0.5, 1, 2]
+        self.SIZE = 256
+        self.TEST_SIZE = 0.15
+        self.UP_SAMPLES = [0.5, 1, 2]
         self.UP_SAMPLE_CLASS = None
 
 config = Config()
 
-def load_and_preprocess_image(path: str, size = [config.size, config.size]) -> np.ndarray:
+def load_and_preprocess_image(path: str, size = [config.SIZE, config.SIZE]) -> np.ndarray:
     """
     Load & Preprocess Text
 
@@ -148,20 +148,19 @@ def name_based_config(config, arg):
         if '-' in value:
             value = [float(x) for x in value.split('-')]
             exec(f'config.{tipe} = {value}')
-        else:
-            exec(f'config.{tipe} = float({value})')
+        else: exec(f'config.{tipe} = float({value})')
     else: pass
 
 def get_config(config, args):
-    try: config.size = int(args[2])
+    try: config.SIZE = int(args[2])
     except: 
         try: name_based_config(config, args[2])
         except: pass
-    try: config.test_size = float(args[3])
+    try: config.TEST_SIZE = float(args[3])
     except: 
         try: name_based_config(config, args[3])
         except: pass
-    try: config.upsamples = [float(x) for x in args[4].split('-')]
+    try: config.UP_SAMPLES = [float(x) for x in args[4].split('-')]
     except: 
         try: name_based_config(config, args[4])
         except: pass
@@ -179,20 +178,20 @@ if __name__ == "__main__":
     print('[INFO] Starting Program to Preprocess & Upsampling Data Gambar..')
     print('[INFO] Config :')
     print(f'       Image Path        : {TRAIN_PATH}')
-    print(f'       Image Resize Plan : {config.size}')
-    print(f'       Split Valid Size  : {config.test_size * 100}%')
-    print(f"       Rasio Upsample    : {' , '.join([str(x) for x in config.upsamples])}")
+    print(f'       Image Resize Plan : {config.SIZE}')
+    print(f'       Split Valid Size  : {config.TEST_SIZE * 100}%')
+    print(f"       Rasio Upsample    : {' , '.join([str(x) for x in config.UP_SAMPLES])}")
     print(f"       Upsample Class    : {config.UP_SAMPLE_CLASS if config.UP_SAMPLE_CLASS != None else 'ALL'}")
     print()
 
     # X and Y
     data = pd.read_csv('https://raw.githubusercontent.com/Hyuto/NLP/master/TRAIN.CSV')
-    TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = config.test_size, 
+    TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = config.TEST_SIZE, 
                                                        random_state = SEED, stratify = data.y.values)
 
     # Up Sample Train Data
     print('[INFO] Memulai Preprocess dan Augmentasi Pada Data Latih')
-    for i, up_sample in enumerate(config.upsamples):
+    for i, up_sample in enumerate(config.UP_SAMPLES):
         print(f'[INFO] Tahap {i + 1}')
         DIREC = f'Up-Sample-0-by-{int(up_sample * 100)}%'
         TEMP_X, TEMP_Y = ApplyAUG(TRAIN_X, TRAIN_y, TRAIN_PATH, up_sample_ratio = up_sample, 

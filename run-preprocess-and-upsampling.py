@@ -142,46 +142,53 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
     print(f'[INFO] Saved to {DIR}')
     return X, Y
 
+def name_based_config(config, arg):
+    if ':' in arg:
+        tipe, value = arg.split(':')
+        if '-' in value:
+            value = [float(x) for x in value.split('-')]
+            exec(f'config.{tipe} = {value}')
+        else:
+            exec(f'config.{tipe} = float({value})')
+    else: pass
+
+def get_config(config, args):
+    try: config.size = int(args[2])
+    except: name_based_config(config, args[2])
+    try: config.test_size = float(args[3])
+    except: name_based_config(config, args[3])
+    try: config.upsamples = [float(x) for x in args[4].split('-')]
+    except: name_based_config(config, args[4])
+    try: config.UP_SAMPLE_CLASS = args[5]
+    except : name_based_config(config, args[5])
+
 if __name__ == "__main__":
     # System ARGS
     args = sys.argv
     TRAIN_PATH = args[1]
-    if args[2] != '-':
-        config.size = int(args[2])
-    if args[3] != '-':
-        TEST_SIZE = float(args[3])
-    else:
-        TEST_SIZE = config.test_size
-    if args[4] != '-':
-        UP_SAMPLES = [float(x) for x in args[4].split('-')]
-    else:
-        UP_SAMPLES = config.upsamples
-    if args[5] != '-':
-        CLASS = args[5]
-    else:
-        CLASS = config.UP_SAMPLE_CLASS
+    get_config(config, args)
 
     print('[INFO] Starting Program to Preprocess & Upsampling Data Gambar..')
     print('[INFO] Config :')
     print(f'       Image Path        : {TRAIN_PATH}')
     print(f'       Image Resize Plan : {config.size}')
-    print(f'       Split Valid Size  : {TEST_SIZE * 100}%')
-    print(f"       Rasio Upsample    : {' , '.join([str(x) for x in UP_SAMPLES])}")
-    print(f"       Upsample Class    : {CLASS if CLASS != None else 'ALL'}")
+    print(f'       Split Valid Size  : {config.test_size * 100}%')
+    print(f"       Rasio Upsample    : {' , '.join([str(x) for x in config.upsamples])}")
+    print(f"       Upsample Class    : {config.UP_SAMPLE_CLASS if config.UP_SAMPLE_CLASS != None else 'ALL'}")
     print()
 
     # X and Y
     data = pd.read_csv('https://raw.githubusercontent.com/Hyuto/NLP/master/TRAIN.CSV')
-    TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = TEST_SIZE, 
+    TRAIN_X, VAL_X, TRAIN_y, VAL_y = train_test_split(data.X.values, data.y.values, test_size = config.test_size, 
                                                        random_state = SEED, stratify = data.y.values)
 
     # Up Sample Train Data
     print('[INFO] Memulai Preprocess dan Augmentasi Pada Data Latih')
-    for i, up_sample in enumerate(UP_SAMPLES):
+    for i, up_sample in enumerate(config.upsamples):
         print(f'[INFO] Tahap {i + 1}')
         DIREC = f'Up-Sample-0-by-{int(up_sample * 100)}%'
         TEMP_X, TEMP_Y = ApplyAUG(TRAIN_X, TRAIN_y, TRAIN_PATH, up_sample_ratio = up_sample, 
-                                  DIR = DIREC, up_sample_class = CLASS, data_aug = data_augmentation,
+                                  DIR = DIREC, up_sample_class = config.UP_SAMPLE_CLASS, data_aug = data_augmentation,
                                   LP = load_and_preprocess_image)
         df = pd.DataFrame({'DIR' : TEMP_X, 'label' : TEMP_Y})
         df.to_csv(DIREC + '/Keterangan.csv', index = False)

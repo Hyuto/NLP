@@ -26,7 +26,7 @@ class Config(object):
 
 config = Config()
 
-def load_and_preprocess_image(path: str, size = [config.SIZE, config.SIZE]) -> np.ndarray:
+def load_and_preprocess_image(path: str, size = (256, 256)) -> np.ndarray:
     """
     Load & Preprocess Text
 
@@ -68,7 +68,7 @@ def data_augmentation(x) -> np.ndarray:
     return rotate(x, random.randint(-70, 70), mode='reflect')
 
 def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
-             up_sample_class = None, DIR = 'Prep Data + AUG'):
+             up_sample_class = None, DIR = 'Prep Data + AUG', SIZE = (256, 256)):
     """
     Fungsi untuk mengaplikasikan Preprocess dan Augmentation ke dalam data gambar untuk disimpan
     kedalam direktori/file yang baru.
@@ -128,7 +128,7 @@ def ApplyAUG(TRAIN_X, TRAIN_y, PATH:str, LP, data_aug, up_sample_ratio = 0.2,
 
         for k, file in enumerate(tqdm(data)):       # Loop Through
             IMAGE_DIR = os.path.join(CHILD_DIR, f'{file[:-4]}.png') # Image save path
-            img = LP(PATH + file)   # Load and Preprocess Image
+            img = LP(PATH + file, size=SIZE)   # Load and Preprocess Image
             tf.keras.preprocessing.image.save_img(IMAGE_DIR, img)   # TF save image
             X.append(IMAGE_DIR); Y.append(i)    # Record path and label to X and Y
 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     print('[INFO] Memulai Preprocess pada Data Validitas')
     DIREC = 'Validitas'
     TEMP_X, TEMP_Y = ApplyAUG(VAL_X, VAL_y, TRAIN_PATH, up_sample_ratio = 0, 
-            DIR = DIREC, data_aug = data_augmentation,
+            DIR = DIREC, data_aug = data_augmentation, SIZE = config.SIZE,
             LP = load_and_preprocess_image)
     df = pd.DataFrame({'DIR' : TEMP_X, 'label' : TEMP_Y})
     df.to_csv(DIREC + '/Keterangan.csv', index = False)

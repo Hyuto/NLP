@@ -24,6 +24,15 @@ class Config(object):
         self.UP_SAMPLES = [0.5, 1, 2]
         self.UP_SAMPLE_CLASS = None
 
+    def refresh_type_data(self):
+        self.SIZE = int(self.SIZE)
+        self.TEST_SIZE = float(self.TEST_SIZE)
+        if len(self.UP_SAMPLES) > 1:
+            self.UP_SAMPLES = [float(x) for x in self.UP_SAMPLES]
+        else:
+            self.UP_SAMPLES = float(self.UP_SAMPLES)
+        self.UP_SAMPLE_CLASS = int(self.UP_SAMPLE_CLASS)
+
 config = Config()
 
 def load_and_preprocess_image(path: str, size = (256, 256)) -> np.ndarray:
@@ -168,6 +177,7 @@ def get_config(config, args):
     except: 
         try: name_based_config(config, args[5])
         except: pass 
+    config.refresh_type_data()
 
 if __name__ == "__main__":
     # System ARGS

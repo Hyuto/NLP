@@ -196,7 +196,7 @@ if __name__ == "__main__":
         DIREC = f'Up-Sample-0-by-{int(up_sample * 100)}%'
         TEMP_X, TEMP_Y = ApplyAUG(TRAIN_X, TRAIN_y, TRAIN_PATH, up_sample_ratio = up_sample, 
                                   DIR = DIREC, up_sample_class = config.UP_SAMPLE_CLASS, data_aug = data_augmentation,
-                                  LP = load_and_preprocess_image)
+                                  SIZE = (config.SIZE, config.SIZE), LP = load_and_preprocess_image)
         df = pd.DataFrame({'DIR' : TEMP_X, 'label' : TEMP_Y})
         df.to_csv(DIREC + '/Keterangan.csv', index = False)
         print()

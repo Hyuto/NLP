@@ -205,8 +205,8 @@ if __name__ == "__main__":
     print('[INFO] Memulai Preprocess pada Data Validitas')
     DIREC = 'Validitas'
     TEMP_X, TEMP_Y = ApplyAUG(VAL_X, VAL_y, TRAIN_PATH, up_sample_ratio = 0, 
-            DIR = DIREC, data_aug = data_augmentation, SIZE = config.SIZE,
-            LP = load_and_preprocess_image)
+            DIR = DIREC, data_aug = data_augmentation, 
+            SIZE = (config.SIZE, config.SIZE), LP = load_and_preprocess_image)
     df = pd.DataFrame({'DIR' : TEMP_X, 'label' : TEMP_Y})
     df.to_csv(DIREC + '/Keterangan.csv', index = False)
     print()

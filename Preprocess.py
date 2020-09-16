@@ -1,7 +1,7 @@
 from pandas import DataFrame
 from emoji import UNICODE_EMOJI
 from string import punctuation
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 from re import sub
 
 class PuncEmoji(object):

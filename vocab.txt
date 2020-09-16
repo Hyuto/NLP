@@ -14736,7 +14736,7 @@ dokumentasi
 dokumen 
 doktrin 
 doktor 
-dokter2 
+dokter2 dokter
 dokter 
 dok 
 doi 
@@ -14753,20 +14753,20 @@ doang
 doakan 
 doa 
 do 
-dngn 
-dngan 
-dng 
+dngn dengan
+dngan dengan
+dng dengan
 dna 
 dn 
-dmna 
-dmn 
+dmna dimana
+dmn dimana
 dm 
-dlu 
+dlu dahulu
 dls 
-dlm 
+dlm dalam
 dll 
 dlh 
-dlam 
+dlam dalam
 dl 
 dkpb 
 dkm 
@@ -14777,7 +14777,7 @@ dk
 djvz1xg2k9 
 djp 
 djin 
-djebol 
+djebol dijebol
 djawas 
 djausal 
 djarum 

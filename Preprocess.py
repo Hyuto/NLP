@@ -2,7 +2,6 @@ from pandas import DataFrame
 from emoji import UNICODE_EMOJI
 from string import punctuation
 from tqdm.notebook import tqdm
-from re import sub
 
 class PuncEmoji(object):
     """
@@ -94,7 +93,9 @@ class SpellChecker(object):
         arr     : List / Numpy array yang berisi kalimat - kalimat yang akan dibenarkan.
         """
         for i in tqdm(range(len(arr))):
-            for miss in self.words:
-                arr[i] = sub(miss, self.words[miss] + ' ', arr[i])
-                arr[i] = ' '.join(arr[i].split())
+            temp = arr[i].split()
+            for j in range(len(temp)):
+                if temp[j] in self.words.keys():
+                    temp[j] = self.words[temp[j]]
+            arr[i] = ' '.join(temp)
         return arr

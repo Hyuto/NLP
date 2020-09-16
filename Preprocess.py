@@ -95,5 +95,6 @@ class SpellChecker(object):
         """
         for i in tqdm(range(len(arr))):
             for miss in self.words:
-                arr[i] = sub(miss, self.words[miss], arr[i])
+                arr[i] = sub(miss, self.words[miss] + ' ', arr[i])
+                arr[i] = ' '.join(arr[i].split())
         return arr

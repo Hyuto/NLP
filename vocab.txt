@@ -3355,26 +3355,26 @@ semula
 semudah 
 semuanya 
 semua 
-semu2 
+semu2 semu
 sempurna 
 semprot 
 sempatkaj 
 sempat 
 semogah 
-semogaa 
+semogaa semoga
 semoga 
-semngat 
-semnetra 
-semnetara 
+semngat semangat
+semnetra sementara
+semnetara sementara
 semisal 
 seminggu 
 seminar 
 semi 
 semeton 
-semester1 
+semester1 semester_1
 semester 
 semesta 
-sementera 
+sementera sementara
 sementara 
 semenjak 
 semena 
@@ -3397,7 +3397,7 @@ sembahyang
 semayamkan 
 semayam 
 semaun 
-semau2 
+semau2 semau
 semata 
 semasa 
 semarang 
@@ -3408,9 +3408,9 @@ semangat
 semalam 
 semakin 
 semacam 
-seláìn 
+seláìn selain
 seluruhnya 
-seluruhindonesiakenatipu 
+seluruhindonesiakenatipu seluruh_indonesia_kena_tipu
 seluruh 
 selundupan 
 seluler 
@@ -3429,7 +3429,7 @@ selidiki
 selidik 
 selfienya 
 selfie 
-selfi 
+selfi selfie
 selesaikan 
 selesai 
 seleraku 
@@ -3449,17 +3449,17 @@ selasa
 selaput 
 selapang 
 selanjutnya 
-selanjurnya 
+selanjurnya selanjutnya
 selanjunya 
 selangor 
 selang 
-selandia_baru_insiden_teroris 
+selandia_baru_insiden_teroris selandia_baru_insiden_teroris
 selandia 
-selametin 
+selametin selamatkan
 selamatkanri 
 selamatkanlah 
 selamatkan 
-selamatdatangindonesiamenang 
+selamatdatangindonesiamenang selamat_datang_indonesia_menang
 selamat 
 selamanya 
 selama 
@@ -3469,7 +3469,7 @@ selaku
 selain 
 selagi 
 sela 
-sel2 
+sel2 sel
 sel 
 sekutunya 
 sekutu 
@@ -3492,16 +3492,16 @@ sekretariat
 sekrang 
 sekor 
 sekolahnews 
-sekolahannya 
+sekolahannya sekolahnya
 sekolahan 
-sekolah2 
+sekolah2 sekolah
 sekolah 
-sekolae 
+sekolae sekolahnya
 sekjen 
 sekitarnya 
 sekitaran 
 sekitar 
-sekirtar 
+sekirtar sekitar
 sekiranya 
 sekilas 
 sekian 
@@ -3531,13 +3531,13 @@ sekali
 sekadau 
 sekadar 
 sek 
-sejáuh 
+sejáuh sejauh
 sejumlah 
 sejuk 
 sejenisnya 
 sejenis 
 sejenak 
-sejeluarga 
+sejeluarga sekeluarga
 sejauh 
 sejatinya 
 sejati 
@@ -3594,16 +3594,16 @@ seenaknya
 seenak 
 seen 
 seekor 
-seeeemua 
-see 
-sedìkìt 
+seeeemua semua
+see se
+sedìkìt sedikit
 sedunia 
 sedulur 
 sedot 
 sedikitpun 
 sedikitnya 
 sedikit 
-sediiiiihhhh 
+sediiiiihhhh sedih
 sedih 
 sediakan 
 sedia 
@@ -3642,9 +3642,9 @@ sebesar
 seberat 
 seberapa 
 sebentar 
-sebenernya 
+sebenernya sebenarnya
 sebenarnya 
-sebenar 
+sebenar sebenarnya
 sebelumnya 
 sebelum 
 sebelas 
@@ -3674,12 +3674,12 @@ sebagus
 sebagian 
 sebagainya 
 sebagaimana 
-sebagaiman 
+sebagaiman sebagaimana
 sebagai 
 sebabnya 
 sebabkan 
 sebab 
-seba5 
+seba5 seba
 seba 
 seat 
 season 
@@ -3696,20 +3696,20 @@ seadanya
 sea 
 se 
 sdt 
-sdr2 
-sdr 
-sdng 
+sdr2 saudara
+sdr saudara
+sdng sedang
 sdn 
 sdm 
-sdit 
-sdikit 
-sdh 
-sdgkn 
-sdg 
+sdit sedikit
+sdikit sedikit
+sdh sudah
+sdgkn sedangkan
+sdg sedang
 sdb 
-sdangkan 
-sdang 
-sdah 
+sdangkan sedangkan
+sdang sedang
+sdah sudah
 sdag 
 sda 
 sd 
@@ -3718,7 +3718,7 @@ scriptnya
 screenshot 
 screen 
 scream 
-scr 
+scr secara
 scorenya 
 scoop 
 scientists 
@@ -3736,21 +3736,21 @@ scam
 scabby 
 sbyudhoyono 
 sby 
-sbsar 
-sbrkn 
-sblum 
-sblmya 
-sblm 
-sbgmn 
+sbsar sebesar
+sbrkn sebarkan
+sblum sebelum
+sblmya sebelumnya
+sblm sebelum
+sbgmn sebagaimana
 sbgi 
-sbgai 
-sbg 
-sbelum2nya 
-sbelah 
-sbbkan 
+sbgai sebagai
+sbg sebagai
+sbelum2nya sebelum_sebelumnya
+sbelah sebelah
+sbbkan sebabkan
 sbb 
-sbarkan 
-sbab 
+sbarkan sebarkan
+sbab sebab
 sb 
 sayuran 
 sayur 
@@ -3785,24 +3785,24 @@ save_indonesia
 save 
 saut 
 saurna 
-saudra2 
+saudra2 saudara
 saudia 
 saudi 
 saudariku 
 saudari 
-saudara²sekalian 
-saudara² 
+saudara²sekalian saudara_sekalian
+saudara² saudara
 saudaranya 
 saudaramu 
 saudaraku 
 saudaradan 
-saudara2mu 
-saudara2 
+saudara2mu saudaramu
+saudara2 saudara
 saudara 
-saudar2 
+saudar2 saudara
 saudagar 
 saud 
-satu²nya 
+satu²nya satu_satunya
 satus 
 saturday 
 saturate 
@@ -3813,7 +3813,7 @@ satunusasatubangsa
 satuman 
 satukan 
 satuan 
-satu2nya 
+satu2nya satu_satunya
 satu 
 satriyo 
 satria 
@@ -3887,7 +3887,7 @@ sanjungan
 sanjaya 
 sanitizing 
 sanitizer 
-sanitazer 
+sanitazer sanitizer
 sangup 
 sangkur 
 sangking 
@@ -3897,7 +3897,7 @@ sangka
 sangh 
 sanggup 
 sangatmembantu 
-sangatlh 
+sangatlh sangatlah
 sangatlah 
 sangat 
 sanga 
@@ -3915,7 +3915,7 @@ sanak
 sana 
 san 
 samurai 
-samudra 
+samudra samudera
 samudera 
 samuaa 
 samsung 
@@ -3931,11 +3931,11 @@ samping
 sampel 
 sampein 
 sampe 
-sampay 
+sampay sampai
 sampau 
 sampang 
-sampaikn 
-sampaikannke 
+sampaikn sampaikan
+sampaikannke sampaikan
 sampaikan 
 sampaian 
 sampai 
@@ -3956,7 +3956,7 @@ samba
 samarinda 
 samar 
 samapta 
-sama2 
+sama2 sama
 sama 
 sam 
 salut 
@@ -3997,7 +3997,7 @@ salahnya
 salahkan 
 salah 
 salabenda 
-sala3 
+sala3 salatiga
 saku 
 saktiadi 
 sakti 
@@ -4006,7 +4006,7 @@ saksi
 saksang 
 sakmono 
 sakitnya 
-sakit2an 
+sakit2an sakit
 sakit 
 saking 
 sakau 
@@ -4016,7 +4016,7 @@ sajen
 sajam 
 sajak 
 sajadah 
-sajaa 
+sajaa saja
 saja 
 sains 
 saing 
@@ -4028,13 +4028,13 @@ said
 sahur 
 sahnya 
 sahkan 
-sahhhhh 
+sahhhhh sah
 sahdan 
 sahamnya 
 saham 
 sahaja 
 sahabatku 
-sahabat2 
+sahabat2 sahabat
 sahabat 
 saha 
 sah 
@@ -4053,11 +4053,11 @@ sadpost
 sadoka 
 sadness 
 sadly 
-sadissss 
-sadisss 
+sadissss sadis
+sadisss sadis
 sadis 
 sadikin 
-sadiiiiissss 
+sadiiiiissss sadis
 sadewa 
 saderek 
 saddam 
@@ -4067,7 +4067,7 @@ sadarkan
 sadarkah 
 sadari 
 sadara 
-sadar2 
+sadar2 sadar
 sadar 
 sad 
 sachet 
@@ -4075,15 +4075,15 @@ sabzi
 sabyan 
 sabuk 
 sabuga 
-sabu2 
+sabu2 sabu
 sabu 
 sabtu 
 sabotase 
-sabobase 
+sabobase sabotase
 sabjek 
 sabit 
 sabillah 
-sabilillh 
+sabilillh sabilillah
 sabilillah 
 sabian 
 sabetan 
@@ -4096,12 +4096,12 @@ sabah
 saatnya 
 saat 
 sa 
-s7 
+s7 setuju
 s3 
 s2 
 s1 
-río 
-rèk 
+río rio
+rèk rek
 rw06 
 rw 
 ruu 
@@ -4110,11 +4110,11 @@ rutinan
 rutin 
 rute 
 rutan 
-rusun² 
+rusun² rusun
 rusun 
 rusuh 
 russian 
-russia 
+russia rusia
 rusli 
 ruslan 
 rusia 
@@ -4127,7 +4127,7 @@ rupiah
 rupee 
 rupanya 
 rupane 
-rupa2nya 
+rupa2nya rupanya
 rup 
 runyam 
 runway 
@@ -4137,7 +4137,7 @@ running
 rungkut 
 run 
 rumusan 
-rumus2 
+rumus2 rumus
 rumus 
 rumpin 
 rumors 
@@ -4145,7 +4145,7 @@ rumor
 rumongso 
 rumit 
 rumahsunatmodern 
-rumahnys 
+rumahnys rumahnya
 rumahnya 
 rumahmu 
 rumahkan 
@@ -4214,7 +4214,7 @@ rp56
 rp550 
 rp500 
 rp450 
-rp400triliun 
+rp400triliun rp400_triliun
 rp4 
 rp300 
 rp280 
@@ -4243,7 +4243,7 @@ rosmah
 rosiana 
 rorotan 
 room 
-roojiuun 
+roojiuun rojiun
 roojiun 
 rooji 
 ronnie 
@@ -4260,8 +4260,8 @@ roma
 rokok 
 roket 
 rokan 
-rojiuun 
-rojiunnn 
+rojiuun rojiun
+rojiunnn rojiun
 rojiun 
 rojiim 
 roji 
@@ -4271,8 +4271,8 @@ rohman
 rohjiun 
 rohini 
 rohingya 
-rohingnya 
-rohignya 
+rohingnya rohingya
+rohignya rohingya
 rohani 
 rohan 
 roh 
@@ -4301,15 +4301,15 @@ rnase
 rn 
 rmol 
 rmh 
-rkyat 
+rkyat rakyat
 rkp 
 rk 
-rizzieq 
+rizzieq rizieq
 rizqi 
 rizki 
 riziq 
 rizieq 
-riziek 
+riziek rizieq
 rizal 
 riza 
 riyanto 
@@ -4398,7 +4398,7 @@ retorika
 retnomarsudi 
 retno 
 retas 
-retak2 
+retak2 retak
 retak 
 resulted 
 restycayah 
@@ -4436,7 +4436,7 @@ resahin
 resah 
 res 
 request 
-republlik 
+republlik republik
 republiknkri 
 republikaonline 
 republika 
@@ -4493,9 +4493,9 @@ religius
 religious 
 religion 
 relief 
-relegius 
+relegius religius
 release 
-relawan2nya 
+relawan2nya relawannya
 relawan 
 relation 
 relatif 
@@ -4505,8 +4505,8 @@ relakah
 rela 
 rel 
 rektor 
-rekrutment 
-rekrutmen 
+rekrutment rekruitmen
+rekrutmen rekruitmen
 rekrut 
 rekruitmen 
 rekor 
@@ -4520,7 +4520,7 @@ rekayasa
 rekapitulasi 
 rekap 
 rekannya 
-rekan2 
+rekan2 rekan
 rekan 
 rekamannya 
 rekaman 
@@ -4576,7 +4576,7 @@ rebecca
 reason 
 really 
 reality 
-realiti 
+realiti reality
 real 
 reaktif 
 reaksirakyat1 
@@ -4585,7 +4585,7 @@ ready
 read 
 reaction 
 re 
-rdiasi 
+rdiasi radiasi
 rbt 
 rb 
 razzy 
@@ -4614,17 +4614,17 @@ ratusan
 ratus 
 ratulangi 
 ratu 
-ratnaspaet 
+ratnaspaet ratnasarumpaet
 ratna 
 ratik 
 rate 
-rata2 
+rata2 rata
 rata 
 rasyid 
-rasulullah_ 
+rasulullah_ rasulullah
 rasulullah 
 rasulnya 
-rasullullah 
+rasullullah rasulullah
 rasul 
 rastra 
 raskin 
@@ -4636,7 +4636,7 @@ rasa
 ras 
 rapunzel 
 rapuh 
-rapp 
+rapp rap
 rapid 
 rapi 
 rapatkan 
@@ -4670,9 +4670,9 @@ rampok
 ramli 
 ramen 
 ramean 
-rame2 
+rame2 rame
 rame 
-rambutne 
+rambutne rambutnya
 rambutan 
 rambu 
 ramalan 
@@ -4680,7 +4680,7 @@ ramainya
 ramaikan 
 ramai 
 ramadhan 
-ramadan 
+ramadan ramadhan
 ram 
 ralat 
 rakyattahukaliancurang 
@@ -4690,9 +4690,9 @@ rakyatmu
 rakyatkompaktumpaspki 
 rakyat_tidak_butuh_janji 
 rakyat 
-rakus2 
+rakus2 rakus
 rakus 
-raktaynya 
+raktaynya rakyatnya
 raksasa 
 rakitan 
 rakhine 
@@ -4702,7 +4702,7 @@ rakaat
 raka 
 rak 
 rajiun 
-rajioun 
+rajioun rajiun
 rajin 
 raji 
 rajesh 
@@ -4740,12 +4740,12 @@ radang
 rada 
 rad 
 racuni 
-racun2 
+racun2 racun
 racun 
 racism 
 rachmawati 
 rachmat 
-rabuu 
+rabuu rabu
 rabu 
 rabies 
 rabbi 
@@ -4753,7 +4753,7 @@ rabbani
 rabbal 
 rabb 
 rab 
-raajiuun 
+raajiuun rajiun
 ra 
 quwwatul 
 quwwata 
@@ -4793,7 +4793,7 @@ qajar
 qadarullah 
 qabul 
 qabas 
-pásálnyá 
+pásálnyá pasalnya
 pwnu 
 pwa 
 pvmbg 
@@ -4843,10 +4843,10 @@ puri
 purbalingga 
 purbaleunyi 
 purba 
-pura² 
+pura² pura
 purapura 
 purabaya 
-pura2 
+pura2 pura
 pura1 
 pura 
 pupuk 
@@ -4875,7 +4875,7 @@ pulih
 pulen 
 pulau 
 pulangkan 
-pulang2 
+pulang2 pulang
 pulang 
 pulak 
 pula 
@@ -4884,7 +4884,7 @@ pukuli
 pukul 
 pujiastuti 
 pujian 
-puji2 
+puji2 puji
 puji 
 puisi 
 puguh 
@@ -4892,7 +4892,7 @@ pudjiastuti
 puding 
 pudek 
 pucat 
-puc4t 
+puc4t pucat
 publikasikan 
 publikasi 
 publik 
@@ -4953,7 +4953,7 @@ proses
 prosedurnya 
 prosedur 
 prosecutor 
-proponsi 
+proponsi propinsi
 propinsi 
 properti 
 propaganda 
@@ -4974,7 +4974,7 @@ profesor
 prof 
 produsen 
 produksi 
-produk2 
+produk2 produk
 produk 
 production 
 product 
@@ -5020,8 +5020,8 @@ pribadinya
 pribadi 
 pria 
 preventif 
-prettt 
-prett 
+prettt pret
+prett pret
 pret 
 prestasimu 
 prestasi 

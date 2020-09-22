@@ -131,7 +131,7 @@ class FeatureExtraction(object):
             self.encoding[feature] = {}
             data = self.get_table(feature, return_prop = True)
             data = sorted(data[feature][data['max_prop'] >= min_prop].tolist(), key = lambda x : len(x),  reverse=True)
-            exclude = data[feature][data['max_prop'] >= min_prop].tolist()
+            exclude = data[feature][data['max_prop'] < min_prop].values
             for i, words in enumerate(data):
                 self.encoding[feature][words] = f'mask{feature}{i}mask'.upper()
             for i, words in enumerate(exclude):

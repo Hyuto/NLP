@@ -162,7 +162,8 @@ class FeatureExtraction(object):
         for feature in features:
             for i in range(len(arr)):
                 for word in self.encoding[feature]:
-                    arr[i] = arr[i].replace(self.encoding[feature][word], f' {word} ')
+                    if self.encoding[feature][word] != '':
+                        arr[i] = arr[i].replace(self.encoding[feature][word], f' {word} ')
                 arr[i] = ' '.join(arr[i].split())
         return arr
 

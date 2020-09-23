@@ -124,18 +124,23 @@ class FeatureExtraction(object):
         min_prop    : Minimal proporsi dari tiap content yang akan di gunakan(di masking)
         features    : List dari feature
         """
-        if self.labels == [] : raise NotImplementedError("Must fit with labels")
+        if min_prop and self.labels == [] : raise NotImplementedError("Must fit with labels")
         if features == 'all':
             features = list(self.features.keys())
         for feature in features:
             self.encoding[feature] = {}
             data = self.get_table(feature, return_prop = True)
-            include = sorted(data[feature][data['max_prop'] >= min_prop].tolist(), key = lambda x : len(x),  reverse=True)
-            exclude = data[feature][data['max_prop'] < min_prop].values
-            for i, words in enumerate(include):
-                self.encoding[feature][words] = f'mask{feature}{i}mask'.upper()
-            for i, words in enumerate(exclude):
-                self.encoding[feature][words] = ''
+            if self.labels != []:
+                include = sorted(data[feature][data['max_prop'] >= min_prop].tolist(), key = lambda x : len(x),  reverse=True)
+                exclude = data[feature][data['max_prop'] < min_prop].values
+                for i, words in enumerate(include):
+                    self.encoding[feature][words] = f'mask{feature}{i}mask'.upper()
+                for i, words in enumerate(exclude):
+                    self.encoding[feature][words] = ''
+            else:
+                include = sorted(data[feature].tolist(), key = lambda x : len(x), reverse = True)
+                for i, words in enumerate(include):
+                    self.encoding[feature][words] = f'mask{feature}{i}mask'.upper()
         
     def encode(self, array, features = 'all'):
         """

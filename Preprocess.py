@@ -116,7 +116,7 @@ class FeatureExtraction(object):
         if return_dict: # return_dict
             return self.features
         
-    def build_mask_code(self, min_prop, features = 'all'):
+    def build_mask_code(self, min_prop = 0, features = 'all'):
         """
         Building Mask code dari Feature yang telah di extract.
 

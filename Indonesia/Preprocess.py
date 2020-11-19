@@ -214,12 +214,12 @@ class SpellChecker(object):
     @staticmethod
     def get_file() -> List[str]:
         """
-        Generate .txt file frome Catatan Cakrawala BDC Satria Data responsitory.
+        Generate .txt file from responsitory.
 
         Returns:
             [list]: List kata" yang vocabulary yang tersedia untuk dibenarkan.
         """
-        data = urlopen("https://raw.githubusercontent.com/Hyuto/BDC-Satria-Data/master/fixed_vocab.txt").read().decode('utf-8')
+        data = urlopen("https://raw.githubusercontent.com/Hyuto/NLP/master/Indonesia/kamus/fixed_vocab.txt").read().decode('utf-8')
         return data.split("\n")
         
     def fit(self, direc:str = 'cc-hand-fixed'):
